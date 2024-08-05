@@ -13,7 +13,7 @@ import com.datalifebrazil.course.entities.Category;
 import com.datalifebrazil.course.services.CategoryService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/categories")
 public class CategoryResource {
 
 	@Autowired
@@ -24,9 +24,9 @@ public class CategoryResource {
 		List<Category> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	
-	@GetMapping(value= "/{id}")
-	public ResponseEntity<Category> findById(@PathVariable Long id){
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Category> findById(@PathVariable Long id) {
 		Category obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
