@@ -1,7 +1,9 @@
 package com.datalifebrazil.course.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +21,8 @@ public class Category implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	private Set<Product> products = new HashSet<>();
 
 	public Category() {
 	}
@@ -44,6 +48,14 @@ public class Category implements Serializable {
 		this.name = name;
 	}
 
+	public Set<Product> getProducts() {
+		return products;
+	}
+	
+//	public void setProducts(Set<Product> products) {
+//		this.products = products;
+//	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -60,5 +72,6 @@ public class Category implements Serializable {
 		Category other = (Category) obj;
 		return Objects.equals(id, other.id);
 	}
+
 
 }
