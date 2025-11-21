@@ -6,7 +6,7 @@ Welcome to the **Workshop Spring Boot 3 JPA** project! This project is designed 
 
 ## Technologies
 
-- **Java 17**: The latest version of Java for modern development.
+- **Java 21**: The latest version of Java for modern development.
 - **Maven**: Dependency management and build automation tool.
 - **Spring Boot 3**: Framework for building stand-alone, production-grade Spring-based applications.
 - **H2 Database**: Lightweight in-memory database for development and testing.
@@ -25,7 +25,7 @@ Welcome to the **Workshop Spring Boot 3 JPA** project! This project is designed 
 
 ### Prerequisites
 
-- **Java 17** installed on your machine.
+- **Java 21** installed on your machine.
 - **Maven** installed for building the project.
 - **PostgreSQL** set up if you want to use it for production.
 - **Heroku CLI** for deployment.
